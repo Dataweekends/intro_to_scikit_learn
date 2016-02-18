@@ -16,7 +16,6 @@ functions including:
 
 # Import the necessary libraries:
 import pandas as pd
-import numpy as np
 
 # Read data from Files
 df = pd.read_csv('iris-2-classes.csv')
@@ -34,7 +33,7 @@ from sklearn.tree import DecisionTreeClassifier
 model = DecisionTreeClassifier(max_depth = 5, random_state=0)
 
 #  Split the features and the target into a Train and a Test subsets.  
-#  Ratio should be 80/20
+#  Ratio should be 70/30
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, 
                             test_size = 0.3, random_state=0)
