@@ -1,0 +1,10 @@
+# Instructions to run:
+# cd to folder containing this file
+# conda env create
+# source activate sklearn
+
+name: sklearn
+dependencies:
+- python=2.7
+- pandas>=0.19
+- scikit-learn>=0.18
