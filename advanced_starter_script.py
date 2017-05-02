@@ -1,4 +1,3 @@
-
 # coding: utf-8
 __author__ = "Francesco Mosconi"
 __copyright__ = "Copyright 2016, Data Weekends"
@@ -61,7 +60,7 @@ pipeline = make_pipeline(transformer,
 
 
 # Do a cross validation:
-from sklearn.cross_validation import cross_val_score
+from sklearn.model_selection import cross_val_score
 cvscores = cross_val_score(pipeline, X, y, n_jobs=-1)
 
 print "The pipeline CV score is:"
@@ -80,7 +79,7 @@ print
 
 # if your model has hyperparameters, try using grid search
 # to optimize them:
-from sklearn.grid_search import GridSearchCV
+from sklearn.model_selection import GridSearchCV
 from sklearn.svm import SVC
 model = SVC()
 params = {'kernel': ('linear', 'rbf'), 'C': [1, 10]}
