@@ -19,7 +19,8 @@ import pandas as pd
 
 # Read data from Files
 df = pd.read_csv('iris-2-classes.csv')
-df['target'] = df['iris_type'].map({'virginica': 1, 'versicolor': 0})
+df['target'] = df['iris_type'].map({'virginica': 1,
+                                    'versicolor': 0})
 
 
 # Define features (X) and target (y) variables
@@ -30,11 +31,12 @@ y = df['target']
 
 # Initialize a decision tree model
 from sklearn.tree import DecisionTreeClassifier
-model = DecisionTreeClassifier(max_depth = 5, random_state=0)
+model = DecisionTreeClassifier(max_depth = 5,
+                               random_state=0)
 
 #  Split the features and the target into a Train and a Test subsets.  
 #  Ratio should be 70/30
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, 
                             test_size = 0.3, random_state=0)
 
